@@ -1,6 +1,6 @@
 # gnome-extension-clean-notifications-position
 
-Extensión para GNOME Shell 50 que mueve el botón **Limpiar** al inicio del historial de notificaciones. Al desactivarla, GNOME recupera su disposición normal.
+Extensión para GNOME Shell 50 que mueve el botón **Limpiar** al inicio del historial de notificaciones y añade un atajo de teclado para limpiarlas sin abrir el panel. Al desactivarla, GNOME recupera su disposición normal y el atajo deja de funcionar.
 
 La instalación es por usuario: no necesita `sudo` y no modifica archivos del sistema.
 
@@ -35,6 +35,24 @@ gnome-extensions list --enabled | grep -F clear-first@todomagichere
 ```
 
 Abre el panel de fecha/notificaciones: el botón **Limpiar** aparecerá arriba.
+
+## Atajo de teclado
+
+Pulsa <kbd>Super</kbd>+<kbd>Mayús</kbd>+<kbd>N</kbd> para limpiar todas las notificaciones, igual que con el botón **Limpiar**. Funciona con el panel abierto o cerrado y también desde la vista de actividades. Si no hay nada que limpiar, no hace nada.
+
+Para cambiarlo por otra combinación, por ejemplo <kbd>Super</kbd>+<kbd>Supr</kbd>:
+
+```bash
+gsettings --schemadir ~/.local/share/gnome-shell/extensions/clear-first@todomagichere/schemas \
+  set org.gnome.shell.extensions.clear-first clear-notifications "['<Super>Delete']"
+```
+
+El cambio se aplica al momento, sin volver a iniciar sesión. Para volver al atajo por defecto:
+
+```bash
+gsettings --schemadir ~/.local/share/gnome-shell/extensions/clear-first@todomagichere/schemas \
+  reset org.gnome.shell.extensions.clear-first clear-notifications
+```
 
 ## Desinstalación
 

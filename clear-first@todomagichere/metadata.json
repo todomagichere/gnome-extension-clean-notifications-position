@@ -1,6 +1,7 @@
 {
   "uuid": "clear-first@todomagichere",
   "name": "Limpiar notificaciones arriba",
-  "description": "Sitúa el botón Limpiar al inicio del historial de notificaciones.",
-  "shell-version": ["50"]
+  "description": "Sitúa el botón Limpiar al inicio del historial de notificaciones y añade un atajo de teclado para limpiarlas.",
+  "shell-version": ["50"],
+  "settings-schema": "org.gnome.shell.extensions.clear-first"
 }

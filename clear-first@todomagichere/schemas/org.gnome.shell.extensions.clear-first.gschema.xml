@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.clear-first"
+          path="/org/gnome/shell/extensions/clear-first/">
+    <key name="clear-notifications" type="as">
+      <default><![CDATA[['<Super><Shift>n']]]></default>
+      <summary>Atajo para limpiar las notificaciones</summary>
+      <description>Limpia todas las notificaciones, igual que el botón Limpiar, sin abrir el panel.</description>
+    </key>
+  </schema>
+</schemalist>
